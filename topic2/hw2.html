@@ -1,18 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<!--
+Chuck Martin
+CNIT 133A
+HW2: jQuery, manipulating the DOM
+This code will traverse the DOM, collect the h2 content, and create a set of links to the h2s at the top of the document
+September 10, 2019
+-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script> -->
 <!-- <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script> -->
 <script>
-$(document).ready(function() { 
-  var border = 1; 
-  var leftmargin = 5; 
-  $("#example p").each(function(index, element) {
-    $(element).css("border", border+"px solid red")
-      .css("margin-left", leftmargin); border += 2;
-      leftmargin += 10;
+$(function() { 
+  // Get each h2
+  var headerindex = 1;
+  $("h2").each(function(){
+    alert($(this).text())
+    $(this).attr("id", "head" + headerindex)
+    headerindex++
   });
+
 });
 </script>
 </head>
