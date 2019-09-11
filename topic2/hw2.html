@@ -20,6 +20,7 @@ $(function() {
   $("h2").each(function(){
     $(this).attr("id", "head" + headerindex);
     headerindex++;
+    // Add an item to the menu for each header
     $("ul").append("<li>" + $(this).text() + "</li>");
   });
 
