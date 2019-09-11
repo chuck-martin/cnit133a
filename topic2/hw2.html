@@ -13,12 +13,14 @@ September 10, 2019
 <!-- <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script> -->
 <script>
 $(function() { 
+  // Insert ul
+  $("<ul></ul>").insertAfter("h1");
   // Get each h2
   var headerindex = 1;
   $("h2").each(function(){
-    alert($(this).text())
-    $(this).attr("id", "head" + headerindex)
-    headerindex++
+    $(this).attr("id", "head" + headerindex);
+    headerindex++;
+    $("ul").append("<li>" + $(this).text() + "</li>");
   });
 
 });
