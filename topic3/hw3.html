@@ -40,9 +40,23 @@ body{
 </style>
 </head>
 <body>
-<div id="chart"></div> 
+<div id="chart">
+
+</div> 
 </body>
-<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3.v4.min.js">
+	var w = 800;
+	var h = 800;
+  var mainSVG = d3.select("#chart")
+		   .append("svg")
+			 .attr("width", w)
+			 .attr("height", h);
+
+  // load the data
+  d3.json("hw3data.json", function(error, data) {
+
+  }
+</script>
 
 <script>
 </script>
