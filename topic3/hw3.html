@@ -6,6 +6,7 @@ Chuck Martin
 CNIT 133A
 HW3: D3
 This code will creage an SVG graph using external data from a JSON file
+Used extensive code from http://bl.ocks.org/Jverma/887877fc5c2c2d99be10
 September 22, 2019
 -->
 <meta charset="utf-8">
@@ -33,7 +34,7 @@ September 22, 2019
 }
 
 body{
-  background: #e8f807;
+  background: #e8f8076b;
   color : #eaeaea;
   padding : 10px;
 }
@@ -89,7 +90,7 @@ var yAxis = d3.svg.axis()
 
 
 // add the SVG element
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#chart").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
