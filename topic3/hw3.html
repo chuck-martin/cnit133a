@@ -86,10 +86,10 @@ body{
 
 
   // Add bar chart
-  svg.selectAll("bar")
+  svg.selectAll("#chart")
       .data(data)
     .enter().append("rect")
-      .attr("class", "bar")
+      .attr("id", "chart")
       .attr("x", function(d) { return x(d.term); })
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.students); })
